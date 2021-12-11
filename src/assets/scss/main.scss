@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap');
+
+// Helpers
+@import "helpers/variables";
+@import "helpers/mixins";
+
+// Vendor (Вендорные стили. Например от плагинов)
+
+// Common (основные стили.)
+@import "common/default";
+@import "common/fonts";
+
+// Components (мелкие визуальные элементы)
+
+// Modules (большие куски. Шапка, футер, продукт)
+
+// Pages (стили, котрые нужно применить для конкретной страницы)
+
+body {
+  font-family: 'Rubik';
+  color: #929BAA;
+
+}
+
+.buttons-group {
+  display: flex;
+  justify-content: space-between;
+  margin: 33px 0;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+textarea {
+  width: 100%;
+  min-height: 64px;
+  border: 1px solid #CFD3DE;
+  outline: none;
+  border-radius: 4px;
+  resize: none;
+
+  &.error {
+    border-color: #ff0000;
+  }
+}
+
+.input-checkbox {
+  input {
+    display: none;
+  }
+
+  label {
+    padding-left: 25px;
+    position: relative;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    color: #38455D;
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      left: 0;
+      border: 1px solid #CFD3DE;
+      box-sizing: border-box;
+      border-radius: 2px;
+
+    }
+  }
+
+  input:checked + label::before {
+    background: #CFD3DE;
+  }
+
+  &.error label{
+   color:#ff0000;
+   &::before {
+    border-color: #ff0000 ;
+   }
+  }
+}
+
+
+.wrapper {
+  max-width: 752px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.w-49 {
+  width: 49%;
+}
+
+.mt-17 {
+  margin-top: 17px;
+}
+
+.input-file {
+  border: 1px dashed #CFD3DE;
+  box-sizing: border-box;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  justify-content: center;
+  padding: 22px;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  color: #CFD3DE;
+
+  &.error {
+    border: 1px dashed #ff0000;
+  }
+
+  input {
+    display: none;
+  }
+
+  span {
+    svg {
+      display: block;
+      margin: 0 auto;
+    }
+
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.01em;
+    color: #929BAA;
+  }
+}
+
+.mx-datepicker.error input {
+  border: 1px solid #ff0000;
+}
+
+.form {
+  max-width: 752px;
+  width: 100%;
+  box-shadow: 0px 8px 20px rgba(56, 69, 93, 0.1), 0px 4px 9px rgba(56, 69, 93, 0.08), 0px 2px 5px rgba(56, 69, 93, 0.0596107), 0px 1px 3px rgba(56, 69, 93, 0.05), 0px 0.598509px 1.5px rgba(56, 69, 93, 0.0403893), 0px 0.249053px 1px rgba(56, 69, 93, 0.03);
+  border-radius: 4px;
+  margin: 0 auto;
+
+  &-footer,
+  &-inner {
+    padding: 16px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &-left {
+    width: 78%;
+  }
+
+  &-right {
+    width: 20%;
+  }
+
+  &-footer {
+    background: #F7F8FA;
+
+  }
+
+  &-btns {
+    max-width: 400px;
+    width: 100%;
+    margin: 30px auto;
+    display: flex;
+    justify-content: space-between;
+  }
+}
