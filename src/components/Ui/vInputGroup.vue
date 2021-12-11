@@ -56,6 +56,9 @@ export default {
       return Math.floor(Math.random() * 90000) + 10000
     }
   },
+  mounted() {
+    console.log(this.number)
+  },
   methods: {
     checkLength(index){
       if(this.inputs[index].value !== ''){

@@ -44,7 +44,7 @@ export default {
   },
   methods: {
     save() {
-      // this.$v.email.$touch()
+      this.$v.email.$touch()
       // console.log(this.$v.email)
       if( this.$v.email.$model!== '' && !this.$v.email.$error){
         this.$router.push('/confirmation')
